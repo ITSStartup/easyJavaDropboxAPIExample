@@ -3,4 +3,4 @@ Example of Java Application using [easyJavaDropboxAPI] (https://github.com/ITSSt
 It is required:
 * create an App Console in your dropbox; 
 * Gives permission
-* Generate token. We can use our web app apps.camilolopes.com.br/dpboxapiweb 
+* Generate token. http://apps.camilolopes.com.br/dpboxapiweb 
