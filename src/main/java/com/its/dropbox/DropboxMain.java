@@ -25,7 +25,12 @@ public class DropboxMain {
 		}
 		//upload service
 		 EasyJavaDropBoxServiceImpl upload = new EasyJavaDropBoxServiceImpl(token);
-		saveToDropbox(upload);		
+		 //saveToDropbox(upload);
+		 
+		 renameFileFromRoot(easyJavaDropBoxService);
+		
+		 renameFile(easyJavaDropBoxService);
+		
 	}
 
 	private static void saveToDropbox(EasyJavaDropBoxService uploadEasyJavaDropBoxService) throws DbxException, IOException {
@@ -46,6 +51,18 @@ public class DropboxMain {
 			e.printStackTrace();
 		}
 		
+	}
+	
+	private static void renameFile(EasyJavaDropBoxService easyJavaDropBoxService)
+			throws DbxException {
+		easyJavaDropBoxService.renameFile("/teste/","myfile.png", "renameok.png");
+	}
+
+	private static void renameFileFromRoot(EasyJavaDropBoxService easyJavaDropBoxService)
+			throws DbxException {
+		String newNameFile = "testelocal.png ";
+		String currentNameFile = "alertfytestelocal.png";
+		easyJavaDropBoxService.renameFileRoot(currentNameFile ,newNameFile);
 	}
 
 }
